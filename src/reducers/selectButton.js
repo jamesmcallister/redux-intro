@@ -1,9 +1,9 @@
-function selectButton( state = {}, action ){
-  switch(action.type) {
-    case 'SELECT_BUTTON':
+function selectButton(state = {}, action) {
+  switch (action.type) {
+    case "SELECT_BUTTON":
       return {
         selectedButton: action.selectedButton
-      }
+      };
     default:
       return state;
   }

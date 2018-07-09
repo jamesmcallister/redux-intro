@@ -1,25 +1,25 @@
-import React from 'react';
-import VotingButtons from './VotingButtons';
+import React from "react";
+import VotingButtons from "./VotingButtons";
 
 class App extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     const reduxState = this.props.store.getState();
 
     this.state = {
       selectedButton: reduxState.selectedButton
-    }
+    };
   }
 
-  componentDidMount(){
+  componentDidMount() {
     const { store } = this.props;
-    store.subscribe( () => {
+    store.subscribe(() => {
       this.updateFromStore();
     });
   }
 
-  updateFromStore(){
+  updateFromStore() {
     const { store } = this.props;
 
     const reduxState = store.getState();
@@ -29,7 +29,7 @@ class App extends React.Component {
     });
   }
 
-  render(){
+  render() {
     return (
       <div>
         <VotingButtons
@@ -37,7 +37,7 @@ class App extends React.Component {
           dispatch={this.props.store.dispatch}
         />
       </div>
-    )
+    );
   }
 }
 
