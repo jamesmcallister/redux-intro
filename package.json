@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "dev": "webpack --mode development",
+    "dev:w": "webpack --mode development --watch",
     "build": "webpack --mode production"
   },
   "author": "",
